@@ -39,89 +39,89 @@ grassLevelMin = 10;
 
 function createStrip (count) {
 
-	var strip = []
+  var strip = []
 
-	if(count < startingWidth){
-		strip = createBlankStrip();
-	} else {
-		while(strip.length < currentGrassLevel){
-			strip.push('a');
-		}
+  if(count < startingWidth){
+    strip = createBlankStrip();
+  } else {
+    while(strip.length < currentGrassLevel){
+      strip.push('a');
+    }
 
-		var rand = Math.random();
+    var rand = Math.random();
 
-		if(rand > .7){ 
-			currentGrassLevel++;
-		}
-		if(rand < .3){ 
-			currentGrassLevel--;
-		}
+    if(rand > .7){ 
+      currentGrassLevel++;
+    }
+    if(rand < .3){ 
+      currentGrassLevel--;
+    }
 
-		if(currentGrassLevel > grassLevelMax){
-			currentGrassLevel = grassLevelMax;
-		}
-		if(currentGrassLevel < grassLevelMin){
-			currentGrassLevel = grassLevelMin;	
-		}
+    if(currentGrassLevel > grassLevelMax){
+      currentGrassLevel = grassLevelMax;
+    }
+    if(currentGrassLevel < grassLevelMin){
+      currentGrassLevel = grassLevelMin;  
+    }
 
-		while(strip.length < currentGrassLevel){
-			strip.push('a');
-		}
-		strip.push('g');
-		while(strip.length < heightTiles){
-			strip.push('d');
-		}
-	}
+    while(strip.length < currentGrassLevel){
+      strip.push('a');
+    }
+    strip.push('g');
+    while(strip.length < heightTiles){
+      strip.push('d');
+    }
+  }
 
-	landscape.push(strip);
+  landscape.push(strip);
 }
 
 function createCastle () {
-	var count = 0;
+  var count = 0;
 
-	while (count < 10) {
-		landscape.push(createBlankStrip());
-	}
-	createPole();
-	count = 0;
-	while(count < 4){
-		landscape.push(createBlankStrip());
-	}
+  while (count < 10) {
+    landscape.push(createBlankStrip());
+  }
+  createPole();
+  count = 0;
+  while(count < 4){
+    landscape.push(createBlankStrip());
+  }
 
 }
 
 function createPole () {
-	var strip = [];
+  var strip = [];
 
-	while(strip.length < 3){
-		strip.push('a');
-	}
-	while(strip.length < currentGrassLevel){
-		strip.push('p');
-	}
-	strip.push('g');
-	while(strip.length < heightTiles){
-		strip.push('d');
-	}
+  while(strip.length < 3){
+    strip.push('a');
+  }
+  while(strip.length < currentGrassLevel){
+    strip.push('p');
+  }
+  strip.push('g');
+  while(strip.length < heightTiles){
+    strip.push('d');
+  }
 }
 
 function createBlankStrip () {
-	var strip = [];
-	while(strip.length < currentGrassLevel){
-		strip.push('a');
-	}
-	strip.push('g');
-	while(strip.length < heightTiles){
-		strip.push('d');
-	}
-	return strip;
+  var strip = [];
+  while(strip.length < currentGrassLevel){
+    strip.push('a');
+  }
+  strip.push('g');
+  while(strip.length < heightTiles){
+    strip.push('d');
+  }
+  return strip;
 }
 
 var count = 0;
 
 while( count < widthTiles){
-	createStrip(count);
-	count++;
+  createStrip(count);
+  count++;
 }
 
 //createCastle();

@@ -1,54 +1,54 @@
 
 AirView = Backbone.View.extend({
 
-	className:'tile air',
+  className:'tile air',
 
-	initialize: function() {
-		this.info = {
-			type: 'air',
-			fallThrough: true
-		}
-		this.render();
-	},
+  initialize: function() {
+    this.info = {
+      type: 'air',
+      fallThrough: true
+    }
+    this.render();
+  },
 
-	render: function(){
+  render: function(){
 
-	}
+  }
 });
 
 
 DirtView = Backbone.View.extend({
 
-	className:'tile dirt',
+  className:'tile dirt',
 
-	initialize: function() {
-		this.info = {
-			type: 'dirt',
-			fallThrough: false
-		}
-		this.render();
-	},
+  initialize: function() {
+    this.info = {
+      type: 'dirt',
+      fallThrough: false
+    }
+    this.render();
+  },
 
-	render: function(){
-		
-	}
+  render: function(){
+    
+  }
 
 });
 
 GrassView = Backbone.View.extend({
 
-	className:'tile grass',
+  className:'tile grass',
 
-	initialize: function() {
-		this.info = {
-			type: 'grass',
-			fallThrough: false
-		}
-		this.render();
-	},
+  initialize: function() {
+    this.info = {
+      type: 'grass',
+      fallThrough: false
+    }
+    this.render();
+  },
 
-	render: function(){
-		
-	}
+  render: function(){
+    
+  }
 
 })
