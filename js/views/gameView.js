@@ -1,4 +1,3 @@
-console.log('hello world');
 Game = Backbone.View.extend({
 
 	id: 'game',
@@ -67,6 +66,3 @@ Game = Backbone.View.extend({
 	}
 
 });
-
-window.game = new Game({});
-$('body').append(game.$el);

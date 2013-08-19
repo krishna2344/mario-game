@@ -5,7 +5,6 @@ air = Backbone.Model.extend({
 		console.log('creating new air model');
 	}
 
-
 });
 
 

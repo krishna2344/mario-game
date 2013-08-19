@@ -4,7 +4,7 @@ body {
 
 #char {
 	position: absolute;
-	background-image: url('marioSprite.png');
+	background-image: url('img/marioSprite.png');
 	width:30px;
 	height:41px;
 	z-index: 100;
